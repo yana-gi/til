@@ -20,3 +20,33 @@
 - クラスが終わった！
 - いろんな話が出てきたけど覚えてはいないのでクラスを定義する際にチェリー本のクラスの章を読み返したい
 - クラスの理解は深まったけど、オブジェクト指向とはあまり仲良くなれなかった。やっぱりコード書かないと身につかないかも
+
+## 2021/08/12
+- メソッドを`private`に設定する(include)のはモジュールの定義側で、クラスメソッドを定義する(extend)のはモジュールを呼び出す側なんだと思った
+- `extend`で呼び出したクラスメソッドはクラス直下やクラスメソッド定義内、`クラス名.メソッド`で呼び出せる。インスタンスメソッド定義内や`インスタンス名.メソッド`では呼び出せない
+```ruby
+module Loggable
+   def log(text)
+     puts "[LOG] #{text}"
+   end
+ end
+
+class Product
+   extend Loggable
+   def self.create_products(names)
+     log 'create_products is called.' #=> 呼び出せる
+   end
+
+   def instance_products(names)
+     log 'instance_products is called.' #=> 呼び出せない
+   end
+
+   log 'Defined Product class.' #=> 呼び出せる
+ end
+
+Product.log(‘hoge’) #=> 呼び出せる
+Product.new.log(‘hoge’) #=> 呼び出せない
+```
+- クラス構文の直下ではクラスメソッドしか呼び出せない
+- モジュールのテストの仕方が気になる。今回はモジュールをミックスインしたクラスを呼び出していたけど、テストクラスから直接モジュールを呼び出してテストすることもあるのかな。bootcamp見てみよう
+
