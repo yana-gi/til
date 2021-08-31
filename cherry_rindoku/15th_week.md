@@ -6,3 +6,9 @@
   - blockをオブジェクト化したものがProc
       - Proc: オブジェクト、 block: オブジェクトじゃない
       - Procならメソッドが使える
+ 
+ ## 2021/08/31
+-  第10章 10.3.3
+    - Procオブジェクト全く分からない状態だったけどちょっとずつ分かるようになってきた
+    - `array.map(&:to_i)`の`&:シンボル`は暗黙的に`to_proc`が呼ばれている
+        - [Symbol\#to\_proc \(Ruby 3\.0\.0 リファレンスマニュアル\)](https://docs.ruby-lang.org/ja/latest/method/Symbol/i/to_proc.html)
