@@ -12,3 +12,12 @@
     - Procオブジェクト全く分からない状態だったけどちょっとずつ分かるようになってきた
     - `array.map(&:to_i)`の`&:シンボル`は暗黙的に`to_proc`が呼ばれている
         - [Symbol\#to\_proc \(Ruby 3\.0\.0 リファレンスマニュアル\)](https://docs.ruby-lang.org/ja/latest/method/Symbol/i/to_proc.html)
+
+## 2021/09/01
+- 10章 10.3.4から10.4.1 まで
+    - `-> (a, b) { a + b }`
+        - Rubyではアロー演算子
+        - JavaScriptではアロー関数
+        - どちらもラムダ式って言われてる。ラムダ式とは……？
+            - [無名関数](https://ja.wikipedia.org/wiki/%E7%84%A1%E5%90%8D%E9%96%A2%E6%95%B0)
+    - 引数チェックは`Proc.new`は曖昧で、`lambda`は厳密
