@@ -1,0 +1,11 @@
+## 2021/09/06
+- 第10章 10.5.4から第11章 11.3.2 まで
+    - `return`や`block`の挙動の違いからProc.newとlamdaどちらを使うか
+        - > Proc.newやラムダの中でわざわざreturnやbreakを使おうとするな！！
+        - > 「よし、落とし穴にはまらないように気を付けながらreturnやbreakを使うぞ」と思うのではなく、「うかつにreturnやbreakを使うと、わかりにくい不具合の原因になりそうだな」と思うようにしてくださいね。
+        - [returnやbreakを使ったときのProc\.newとラムダの挙動の違い \- Qiita](https://qiita.com/jnchito/items/83410c0cda446efea582)
+    - Proc.newとlambaの使い分けは引数の個数の柔軟性でするのかな
+    - `did_you_mean`というgemがあることを初めて知った
+- ふりかえり
+    - ついにyeldとProcの章が終わった！チェリー本の終わりもついに見えてきた
+    - 難しくて理解を避けてきた`Proc`は思った以上に身近なものだった
