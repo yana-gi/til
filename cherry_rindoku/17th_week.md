@@ -23,3 +23,13 @@
     - rake taskの他にrails runnerもある
         - [Railsでバッチを書く時によく使うrails runnerとrake taskの違い \- Qiita](https://qiita.com/rllllho/items/672e336a03335cba6b34)
     - 伊藤さんが「最後まで読み切ると思ってなかった」とおっしゃいたけど、自分もそう思う
+
+
+## 2021\-09\-16
+- 第12章 12.8から12.9まで
+    - Gemfileにかかれている`~>`の正体が分かってよかった
+    - [セマンティック バージョニング 2\.0\.0 \| Semantic Versioning](https://semver.org/lang/ja/)
+    - 確かにRailsでは`require`を書いたことがほとんどなかった。Railsが自動で読み込んでくれるため。
+- 付録 A.2まで
+        - Rails 6.0からZeitwerkが導入された[定数の自動読み込みと再読み込み \(Zeitwerk\) \- Railsガイド](https://railsguides.jp/autoloading_and_reloading_constants.html)
+    - 素のRubyの知識の基礎ができていればRubyとRailsそれぞれがやってくれることの切り分けができるようになるのかな、と思った
