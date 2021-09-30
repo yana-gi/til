@@ -1,6 +1,6 @@
 ## 2021/09/28
-    - RailsドキュメントはRailsはじめたばかりの頃に検索で引っかかりやすいので参照していた思い出。Railsドキュメントは著者不明なのでRailsガイドや公式APIドキュメントを参照した方がいい
-    - [Ruby on Railsを使った開発で参照してもよいドキュメント \- Qiita](https://qiita.com/hanachin_/items/76a24bcef889edb59d19)
+- RailsドキュメントはRailsはじめたばかりの頃に検索で引っかかりやすいので参照していた思い出。Railsドキュメントは著者不明なのでRailsガイドや公式APIドキュメントを参照した方がいい
+- [Ruby on Railsを使った開発で参照してもよいドキュメント \- Qiita](https://qiita.com/hanachin_/items/76a24bcef889edb59d19)
 
 ## 2021/09/29
 - インストールで詰まったのでメモ
@@ -31,3 +31,13 @@
     - [Bundler 2系しか入っていなくて既存アプリがbundle installできなかった… \| by Tatsuya Tobioka \| Ruffnote \| Medium](https://medium.com/ruffnote/bundler-2系しか入っていなくて既存アプリがbundle-installできなかった-dd03737d3866)
     - > Bundler 2系は .lockファイルを見て切り替えるようなので、切り替える先のBundlerが見つからずNotFoundエラーになるということでしょう。
     - 🤔 `.lockファイル`はどこまでみてるんだろう？
+
+## 2021/09/30
+- Chapter2 2-4から 6-1-5まで
+    - `.pid`ファイル
+        - [「/var/run」ディレクトリ \| Linux技術者認定 LinuC \| LPI\-Japan](https://linuc.org/study/knowledge/523/)
+        - .pidファイルには、プロセスIDなどが書かれている。PC再起動時などにうまく削除されず残っている場合がある
+    - rails newするときにインストールしたバージョンより新しいものが入っていたのは、Gemfileに`~>`でバージョンを指定しているため。
+        - `gem 'rails', '~> 5.2.1'` の場合、5.2.1以上5.3.0未満
+    - CRUDはクラッドと読む
+
