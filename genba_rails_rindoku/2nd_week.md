@@ -41,3 +41,15 @@
         - `gem 'rails', '~> 5.2.1'` の場合、5.2.1以上5.3.0未満
     - CRUDはクラッドと読む
 
+## 2021/10/01
+- Chapter2 2-6-1-5から2-6-1コラムまで
+    - `/config/database.yml`は最近herokuを触ったときに編集した。本番・開発・テスト環境でDBの参照先を変えることもある
+    - `YML`ファイルのエイリアスとアンカーを使って共通化させることができる
+    ```ruby=
+    animal: &animal
+      cat: ネコ
+      dog: イヌ
+    animal_shop1:
+      <<: *animal
+      hamster: ハムスター
+    ```
