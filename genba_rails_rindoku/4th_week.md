@@ -7,3 +7,11 @@
         - 前のリクエストで作成した変数は次のリクエストでっそのまま使うことができない。
         - createアクションの場合、わざわざDBなどに保存するよりもシンプルのため、新しくオブジェクトを作ることが多い
 
+## 2021/10/12
+- Chapter 3-3-1-7から　 3-3-1-6まで
+    - `human_attribute_name`の機能になぜ`human`がついているのか気になってる
+      - :washimo:
+      - > Transforms attribute names into a more human format, such as “First name” instead of “first_name”.
+      - https://api.rubyonrails.org/classes/ActiveModel/Translation.html#method-i-human_attribute_name
+      - `human format`ってhuman-readable的な……？
+  - Flashメッセージの情報はセッションで保存されていることを初めて知った
