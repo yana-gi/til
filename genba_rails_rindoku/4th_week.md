@@ -15,3 +15,12 @@
       - https://api.rubyonrails.org/classes/ActiveModel/Translation.html#method-i-human_attribute_name
       - `human format`ってhuman-readable的な……？
   - Flashメッセージの情報はセッションで保存されていることを初めて知った
+
+# 2021/10/13
+- Chapter 3-3-3から 3-3-3-2まで
+    - `simple_format` 初めて知った。便利
+        - https://api.rubyonrails.org/classes/ActionView/Helpers/TextHelper.html#method-i-simple_format
+    - 英語なので避けてたrails_apiのdocをあたるようになってきた
+    - Rails側でXSS対策をしなくてもscriptやHTMLタグが実行されなかった。
+        - Rails側でやってくれてるのかな？
+
