@@ -18,3 +18,15 @@
         - nullはnull
             - boolean型だったらtrue/falseのどちらでもない
             - countに含まれない
+
+## 2021/10/20
+- P133　4-2-3　文字列カラムの長さを指定する　から 4.3.3 必須かどうかの検証を追加する　まで
+    - マイグレーションファイルの変更
+        - バージョンを戻す際の処理を
+            - `add_column`：自動生成してくれる（changeメソッドでOK）
+            - `change_column`:自動生成してくれない（up/downメソッドを書く必要がある）
+        - `bin/rails db:migrate:redo`をして確認をする
+        - https://railsguides.jp/active_record_migrations.html#changeメソッドを使う
+    - `save`と`save!`の違い
+        - 検証（valid）エラーが発生した場合に`false`にするか例外が発生するかの違い
+        - 自分は今までDB更新処理時のエラーも含まれているのかと思っていた（でも要検証かも）
