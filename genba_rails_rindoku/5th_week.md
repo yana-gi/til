@@ -43,4 +43,7 @@
     - Rails6.1で`update_attributes`などが削除されてたりする模様 :eyes: 
         - https://railsguides.jp/6_1_release_notes.html#active-record
 
-
+## 2021/10/22
+- P144 4.4 コールバック　から　P147 4.4.3 トランザクション　まで
+    - モデル層のコールバックは、検証やsave/updateの前後に呼び出して処理を行う
+    - コールバッククラスがよく分かっていないので、Railsガイドを読みたい
