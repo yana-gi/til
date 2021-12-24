@@ -10,3 +10,11 @@
     - メールのテストを今まで書いたことがなかったので勉強になった
     - メールの構造を理解しておく必要がありそう。HTTPレスポンスのようにheaderとbodyがあることは分かった
     - メールの構造自体と、RubyのMailクラスの理解が両方必要……？
+
+## 2021\-12\-24
+- Chapter 7-5-3から Chapter 7-5-4 まで
+    - ActiveStorageをインストールすると2つのテーブルができる
+    - ActiveStorage:Blob
+        - ファイルの実体以外の情報を管理する。実体はDB以外で管理する
+    - ActiveStorage:Attachment
+        - ActiveStorage:Blobとアプリ内のモデルを関連づける中間テーブル
