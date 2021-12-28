@@ -24,3 +24,11 @@
     - コントローラーでhtml以外のformatを指定するのは初めてだった
     - はるぐちさんの説明のおかげでCSV出力の流れが分かった！
     - `send`メソッド便利〜
+
+## 2021\-12\-28
+- Chapter 7-6-2から 7-6-2まで
+    - Hash#sliceは引数に指定したarray||Hashのkeyだけを取得する
+    - [Hash\#slice \(Ruby 3\.0\.0 リファレンスマニュアル\)](https://docs.ruby-lang.org/ja/latest/method/Hash/i/slice.html)
+    - `Hash#slice`はRubyのメソッドなのかな。Rails APIには`slice!`しかなかった
+        - https://api.rubyonrails.org/classes/Hash.html
+    - [ActiveSupport版とRuby 2\.5版の挙動の違い](https://qiita.com/_mmasaki/items/fc98bfb494b40273c4cb)
