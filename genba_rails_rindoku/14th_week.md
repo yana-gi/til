@@ -32,3 +32,9 @@
     - `Hash#slice`はRubyのメソッドなのかな。Rails APIには`slice!`しかなかった
         - https://api.rubyonrails.org/classes/Hash.html
     - [ActiveSupport版とRuby 2\.5版の挙動の違い](https://qiita.com/_mmasaki/items/fc98bfb494b40273c4cb)
+
+
+## 2022\-1\-4
+
+- 第11章 11.5.1 第11章 11.5.2の終わりまで
+    - 右代入はパターンマッチの要素の一つだったのか！（元は右代入単体で実装されたらしい）
