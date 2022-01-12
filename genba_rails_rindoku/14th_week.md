@@ -38,3 +38,13 @@
 
 - 第11章 11.5.1 第11章 11.5.2の終わりまで
     - 右代入はパターンマッチの要素の一つだったのか！（元は右代入単体で実装されたらしい）
+
+## 2022/01/12
+- Chapter 8-4-2-1途中から Chapter 8-4-2-2まで
+    - `Webpacker::Manifest::MissingEntryError in` 
+        - 解決するまでにやったこと
+            - `bin/rails webpacker:install`
+            - `bin/rails webpacker:compile`
+        - 疑問：webpackerのコンパイルをしたらエラーが解消されて動いたけど、その理由が分からなかった。webpackerをinstallした時点でコンパイルしてくれなかった原因はなんだろう？
+    - webpackerを入れたら削除ボタンが機能しなくなった。deleteアクションで指定しているのにGETアクションが動く。
+        - `rails-ujs`がDELETEリクエストの発行や確認ダイアログを表示してくれるらしいので、そこが関係してるかも？
