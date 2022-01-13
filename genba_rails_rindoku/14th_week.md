@@ -33,7 +33,6 @@
         - https://api.rubyonrails.org/classes/Hash.html
     - [ActiveSupport版とRuby 2\.5版の挙動の違い](https://qiita.com/_mmasaki/items/fc98bfb494b40273c4cb)
 
-
 ## 2022\-1\-4
 
 - 第11章 11.5.1 第11章 11.5.2の終わりまで
@@ -48,3 +47,10 @@
         - 疑問：webpackerのコンパイルをしたらエラーが解消されて動いたけど、その理由が分からなかった。webpackerをinstallした時点でコンパイルしてくれなかった原因はなんだろう？
     - webpackerを入れたら削除ボタンが機能しなくなった。deleteアクションで指定しているのにGETアクションが動く。
         - `rails-ujs`がDELETEリクエストの発行や確認ダイアログを表示してくれるらしいので、そこが関係してるかも？
+
+## 2022/01/13
+- Chapter 8-5から  Chapter 8-4-2-2まで
+    - webpackerを入れたら削除ボタンが機能しなくなった件が直った🎉
+        - rails-ujsが読み込まれていなかったのが原因。rails-ujsをyarnインストールしてpacksファイルにimport&startをした。
+        - 自分のアプリではそんなことをしていないと思ったらRails6ではWebpackerがデフォルトなので最初から読み込まれていた
+            - https://zenn.dev/yukito0616/articles/f8420b87984917#ちなみにrails6だと
