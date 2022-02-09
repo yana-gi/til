@@ -79,3 +79,12 @@
     - 自作サービスのバージョンアップもこまめにやっていかないとな〜と思った😇
     - バージョンアップはこまめにやっておくと負担も小さくなる（一気にやろうとするとハードルが高くなる）
     - Dependabotは色々設定ができる
+
+## 2021\-02\-09
+- Chapter 10-9-1から10-10まで
+    - ざっくりとした理解
+        - ActiveSupport::Concernがあると親モデルの記述がシンプルになる
+        - STIは継承関係にあるモデルはDB側ではすべて同じテーブルに格納される
+    - 後で読む
+        - ActiveSupport::Concernのあり/なしでの記述の違いは[\[Rails\] ActiveSupport::Concern の存在理由 \- Qiita](https://qiita.com/castaneai/items/6dc121ce6ff100614f42)に書いてあった
+        - STI（単一テーブル継承）は独習Railsの方が分かりやすい（haruguchiさん情報）
