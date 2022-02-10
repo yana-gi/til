@@ -88,3 +88,12 @@
     - 後で読む
         - ActiveSupport::Concernのあり/なしでの記述の違いは[\[Rails\] ActiveSupport::Concern の存在理由 \- Qiita](https://qiita.com/castaneai/items/6dc121ce6ff100614f42)に書いてあった
         - STI（単一テーブル継承）は独習Railsの方が分かりやすい（haruguchiさん情報）
+
+## 2022\-02\-10
+- Chapter 10-10-1から 10-10-3まで
+    - viewの共通処理はhelperに、コントローラーの共通処理は下記の方法で書く
+    - コントローラーの共通化には2つ方法がある
+        - 基底クラスを追加してMix-inする
+        - ApplicationControllerに共通機能を記述する（どのコントローラーからも呼び出せる）
+    - bootcampの[ApplicationController](
+https://github.com/fjordllc/bootcamp/blob/main/app/controllers/application_controller.rb)にもログインや認証・権限周りの共通処理が書いてあった👀
