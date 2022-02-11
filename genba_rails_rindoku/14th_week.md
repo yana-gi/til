@@ -97,3 +97,14 @@
         - ApplicationControllerに共通機能を記述する（どのコントローラーからも呼び出せる）
     - bootcampの[ApplicationController](
 https://github.com/fjordllc/bootcamp/blob/main/app/controllers/application_controller.rb)にもログインや認証・権限周りの共通処理が書いてあった👀
+
+## 2022\-02\-11
+- Chapter 10-10-4から　10-11-2 まで
+    - コントローラーの処理を共通化する前にモデルに切り出せないか？を考える
+    - P421に書かれている「>パーフォーマンスのオーバーヘッド」とは
+        - 処理の負担がrenderを使わないで記述する <　eachで回してrenderを表示する と言ったように普段やるより処理の負担がかかること
+        - 繰り返しパーシャルを呼び出すには`:collection`
+    - P419の`all.max_by { |t| t.priority + t.volume}`をSQL側で呼び出せないか？と言う話
+        - [maximum](https://api.rubyonrails.org/v7.0/classes/ActiveRecord/Calculations.html#method-i-maximum)メソッドには一つのカラムを指定するだけ（複数のカラムの合計値は指定できない）なのかな？
+            - `maximxum('priority + volume')` とか書いたらいけないかなー (適当)
+            - [calculate](https://api.rubyonrails.org/v7.0/classes/ActiveRecord/Calculations.html#method-i-calculate)で`Person.sum("2 * age")`しているからできるかも（適当）
