@@ -108,3 +108,11 @@ https://github.com/fjordllc/bootcamp/blob/main/app/controllers/application_contr
         - [maximum](https://api.rubyonrails.org/v7.0/classes/ActiveRecord/Calculations.html#method-i-maximum)メソッドには一つのカラムを指定するだけ（複数のカラムの合計値は指定できない）なのかな？
             - `maximxum('priority + volume')` とか書いたらいけないかなー (適当)
             - [calculate](https://api.rubyonrails.org/v7.0/classes/ActiveRecord/Calculations.html#method-i-calculate)で`Person.sum("2 * age")`しているからできるかも（適当）
+
+## 2022\-02\-16
+- Chapter 10-12-4から 10-12-4まで
+    - 外部APIと連携した処理は、外部サービスに関連するロジックはクラスに閉じ込める
+        - コントローラーがスッキリする
+        - ダミー実装と入れ替えやすい（APIが未実装だったとしても実装を進めることができる
+        - テストがしやすくなる
+    - 本ではまずコントローラーで実装→クラスに切り分けるやり方でやっているので参考にしたい
