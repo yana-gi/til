@@ -53,3 +53,16 @@
         - undefinedの方がサポートが手厚い
         - どちらをどのように使うかは宗派がある
 
+## 2022/06/11
+- p.53 「コラム5」 から p.75 「3.1.1 オブジェクトは “ 連想配列 ” である」　まで
+    - オペランドにNaNが与えられた時は常にfalseを返す
+        - xがNaNだったら`x < 100` も `x === NaN`もfalseを返すので罠
+    - `&&`や`||` の戻り値（短絡評価）はRubyと同じ
+    - Null合体演算子 `??=`
+        - 右辺がnull か undefined の場合に右辺の値を返す
+        - [Null 合体演算子 \(??\) \- JavaScript \| MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+    -  `&&=・||=・??=` は必要がなければ代入すらされない（代入しても値が同じなので）
+    - TypeScriptではオブジェクトは大事な概念
+    - TypeScriptではオブジェクトの出番が多くクラスはほぼ全く使われない
+        - VueとかReact とかのフレームワークも確かにほとんどクラスを使わない
+        - サーバーサイドだとどうなんだろう？
