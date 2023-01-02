@@ -54,3 +54,23 @@
 
 - `next build` 最適化されたプロダクション用のコードを生成する
 - `next start` プロダクションコードを実行する
+
+## Jest
+- JavaScript向けのテストフレームワーク
+- ReactやVueだけでなく、Node.js向けのパッケージのテストも行うことができる
+
+```ts
+function isZero(value: number): boolean {
+  return value === 0;
+}
+```
+```ts
+test("0を渡したらtrueになること", () => {
+  const result = isZero(0);
+  expect(result).toBe(true);
+});
+```
+
+- Jestではexpect関数と抹茶ーを使って結果が期待する値になっているかを記述する
+- マッチャーは `expect` 関数の戻り値に生えてるメソッド
+- toBe マッチャーはJSの厳密等価比較(`===`)と同じ
