@@ -121,5 +121,77 @@ console.log(arr[1]);
 undefinedにはリテラルはない。undefinedは変数（！）
 グローバル定数なものと理解しても問題ない
 
+# 2023/01/03
+
 ### undefinedとnullの違い
+
+- JavaScriptでは「値がない」に相当する表現にnullとundefinedの2通りがある
+- undefined 
+  - 値が代入されていないため、値がない
+  - オブジェクトに存在しないプロパティや配列にない要素にアクセスした時もundefinedになる
+    - ⚠️ JavaScriptはエラーにならない
+  - 変数
+- null 
+  - 代入すべき値が存在しないため、値がない
+  - nullは自然発生しない
+  - リテラル
+
+どちらを使えばいいのあｋ
+
+- undefinedに統一する方が簡単
+  - TypeScriptのガイドラインにも [nullは使わない](https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines#null-and-undefined) と記載されている
+  - undefinedは至る所で自然発生するので、nullで統一しようとするとundefinedを全てnullにしようとするのは大変
+
+
+### シンボル型
+JavaScriptのシンボル型はプリミティブの一種
+- 倫理型や数値型は値が同じであれば等価比較が`true`になる
+- シンボルはシンボル名が同じでも初期化した場所が違うとfalseになる
+
+```ts
+> const s1 = Symbol("foo");
+undefined
+> const s2 = Symbol("foo");
+undefined
+> console.log(s1 === s1);
+true
+undefined
+> console.log(s1 === s2);
+false
+```
+
+⚠️ Rubyはシンボル値が同じであればどこで書いたものでも等価比較が`true`になる
+
+JavaScriptでシンボルを使って書く機会はあまり多くない
+
+###　型強制
+
+JavaScriptには型が異なる2つの値を処理する時に、暗黙的に別の型へ変換されることがある
+
+
+```ts
+// エラーにならず、stringの1が数値型として扱われる
+> "1" - 1
+0
+```
+
+📝
+RubyはTypeErrorになる
+
+```ruby
+❯ irb  
+irb(main):001:0> "1" + 1
+(irb):1:in `+': no implicit conversion of Integer into String (TypeError)
+	from (irb):1:in `<main>'
+	from /Users/yana/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/irb-1.4.1/exe/irb:11:in `<top (required)>'
+	from /Users/yana/.rbenv/versions/3.0.2/bin/irb:25:in `load'
+	from /Users/yana/.rbenv/versions/3.0.2/bin/irb:25:in `<main>'
+irb(main):002:0> 1 + "1"
+(irb):2:in `+': String can't be coerced into Integer (TypeError)
+	from (irb):2:in `<main>'
+	from /Users/yana/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/irb-1.4.1/exe/irb:11:in `<top (required)>'
+	from /Users/yana/.rbenv/versions/3.0.2/bin/irb:25:in `load'
+	from /Users/yana/.rbenv/versions/3.0.2/bin/irb:25:in `<main>'
+irb(main):003:0> 
+```
 
