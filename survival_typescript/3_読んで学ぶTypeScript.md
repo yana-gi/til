@@ -202,5 +202,12 @@ irb(main):003:0>
 JavaScriptｔのオブジェクトの生成はプロトタイプベース。
 クラスベースがクラスからオブジェクトを生成するのに対して、プロトタイプベースはオブジェクトを素にして新しいオブジェクトを生成する
 
+# 2023/01/05
 
+### object型, Object型、{}型
+
+![image](https://user-images.githubusercontent.com/67262644/210780265-700bf3cc-3dab-4c07-a40c-3a22b6eff20f.png)
+
+object型 : オブジェクトのみ代入可能
+Object型・{}型 : オブジェクト　と　null、undefinedを除くプリミティブ型が代入可能
 
