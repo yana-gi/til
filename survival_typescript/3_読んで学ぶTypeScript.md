@@ -211,3 +211,41 @@ JavaScriptｔのオブジェクトの生成はプロトタイプベース。
 object型 : オブジェクトのみ代入可能
 Object型・{}型 : オブジェクト　と　null、undefinedを除くプリミティブ型が代入可能
 
+# 2023/01/07
+
+## 分割代入
+オブジェクトからプロパティを取り出す場合、分割代入をするとプロパティを2度書かなくて済む
+
+```ts
+const item = { price: 100 }
+const price = item.price
+
+// 分割代入をした場合
+const item = { price: 100 }
+const { price } = item
+
+```
+
+```ts
+// 複数のプロパティを取り出す
+const obj = { a: 1, b:2 }
+const {a, b} = obj
+```
+
+- 入れ子のプロパティを取り出せる
+- デフォルト値も指定できる
+
+## Shorthand property names
+オブジェクトのキーと変数名が同じ時にオブジェクトに値を代入する時に、オブジェクトのキーの記載を省略することができる
+
+## オプショナルチェーン
+- nullやundefinedのプロパティを参照してもエラーが発生しないようにする
+
+- TypeScript でオプショナルチェーンを使った場合、最後のプロパティの方とundefinedのユニオン型になる
+- Null合体子と相性がいい
+
+```ts
+let book: undefined　　|　{ title: string }
+const title = book?.title ?? "デフォルトタイトル"
+console.log(title)
+```
