@@ -249,3 +249,30 @@ let book: undefined　　|　{ title: string }
 const title = book?.title ?? "デフォルトタイトル"
 console.log(title)
 ```
+
+# 2023/01/09
+
+読み直す
+- [オブジェクトをループする方法](https://typescriptbook.jp/reference/values-types-variables/object/how-to-loop-an-object)
+- [構造的部分型 \(structural subtyping\) \| TypeScript入門『サバイバルTypeScript』](https://typescriptbook.jp/reference/values-types-variables/structural-subtyping)
+
+## 配列
+JavaScriptの配列はオブジェクト（リテラルじゃない）ため、配列の中身が同じでもインスタンスが異なると期待する比較ができない
+
+```ts
+const list1 = [1,2,3]
+const list2 = [1,2,3]
+console.log(list1 == list2) // => false
+const list3 = list1
+console.log(list1 == list3) // => true
+```
+
+配列同士の比較をするにはisEqualを使う
+```ts
+import _ from 'lodash';
+
+const list1 = [1,2,3]
+const list2 = [1,2,3]
+
+console.log(_.isEqual(list1, list2))  // => true
+```
